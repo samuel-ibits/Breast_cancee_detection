@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" href="insertresult.css" />
+  </head>
+  <body>
+    <div class="top-section">
+      <img src="images/logo.png" alt="" srcset="" />
+    </div>
+    <div class="pc-logo">
+      <div class="pc-logo-img">
+        <img src="./images/cancer detection 1.png" alt="" />
+      </div>
+    </div>
+
+    <div class="flexed">
+      <div class="pc-big-img">
+        <img src="./images/1.png" alt="" class="pc-img" />
+      </div>
+      <div class="wide-mobile mobile-mid">
+        <form action="">
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+            <div class="progress-text" id="progress-text">0%</div>
+          </div>
+
+          <p>Status normal</p>
+          <button type="submit" class="login-button" onclick="alert('Saved')">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function setProgressValue(percentage) {
+        const progressBar = document.getElementById("progress-fill");
+        const progressText = document.getElementById("progress-text");
+
+        progressBar.style.transform = `rotate(${percentage * 3.6}deg)`;
+        progressText.textContent = `${percentage}%`;
+      }
+
+      // Example usage: setProgressValue(75);
+
+      setProgressValue(75);
+    </script>
+  </body>
+</html>
